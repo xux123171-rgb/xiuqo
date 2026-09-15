@@ -285,7 +285,7 @@ def build_top_level_parser():
     ``subparsers.add_parser(...)``.
     """
     parser = argparse.ArgumentParser(
-        prog="xiuqo", description="Xiuqo Agent - AI assistant with tool-calling capabilities",
+        prog="xiuqo", description="Xiuqo Agent - self-improving AI agent for the terminal",
         formatter_class=argparse.RawDescriptionHelpFormatter, epilog=_EPILOGUE)
     _add_top_level_flags(parser)
     subparsers = parser.add_subparsers(dest="command", help="Command to run")
