@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@xiuqo/ink": ["src/types/xiuqo-ink.d.ts"]
+    }
+  }
+}
