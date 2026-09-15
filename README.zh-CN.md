@@ -20,13 +20,27 @@ Xiuqo 是一个开源终端 AI agent：接任意模型（OpenRouter、OpenAI、A
 ## 快速开始
 
 ```bash
-git clone https://github.com/xux123171-rgb/xiuqo.git && cd xiuqo
-uv sync --extra dev          # 或 pip install -e .
-.venv/bin/xiuqo setup        # 选 provider + 模型（API key 写入 ~/.xiuqo/.env）
-.venv/bin/xiuqo              # 交互聊天（加 --tui 上完整终端界面）
+# Linux / macOS / WSL2 / Termux —— 一条命令（自动装 uv + Python）
+curl -fsSL https://raw.githubusercontent.com/xux123171-rgb/xiuqo/main/scripts/install.sh | bash
+
+# Windows（PowerShell）
+iex (irm https://raw.githubusercontent.com/xux123171-rgb/xiuqo/main/scripts/install.ps1)
 ```
 
-Windows 用 `.venv\Scripts\xiuqo`。国内网络建议配 GitHub 加速镜像 + 清华 pip 源。
+新开终端后：
+
+```bash
+xiuqo setup     # 选 provider + 模型（API key 写入 ~/.xiuqo/.env）
+xiuqo           # 交互聊天
+```
+
+**手动安装 / 国内网络**：
+
+```bash
+git clone https://ghproxy.net/https://github.com/xux123171-rgb/xiuqo.git && cd xiuqo
+uv sync --locked --default-index https://mirrors.aliyun.com/pypi/simple
+.venv/bin/xiuqo setup          # Windows: .venv\Scripts\xiuqo setup
+```
 
 ## 命令速查
 

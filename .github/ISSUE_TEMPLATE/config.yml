@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: 💬 Nous Research Discord
-    url: https://discord.gg/NousResearch
-    about: For quick questions, showcasing projects, sharing skills, and community chat.
+  - name: 🤖 Upstream Hermes Agent docs
+    url: https://hermes-agent.nousresearch.com/docs
+    about: Xiuqo is derived from Hermes Agent — deep behavioral docs live upstream.
   - name: 📖 Documentation
     url: https://github.com/xux123171-rgb/xiuqo/blob/main/README.md
     about: Check the README and docs before opening an issue.

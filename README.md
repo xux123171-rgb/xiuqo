@@ -25,11 +25,37 @@ What makes it different is the **learning loop**: it writes reusable skills from
 ## Quick start
 
 ```bash
-git clone https://github.com/xux123171-rgb/xiuqo.git && cd xiuqo
-uv sync --extra dev          # or: pip install -e .
-.venv/bin/xiuqo setup        # pick provider + model (API keys go to ~/.xiuqo/.env)
-.venv/bin/xiuqo              # interactive chat
+# Linux / macOS / WSL2 / Termux — one command, installs uv+Python if missing
+curl -fsSL https://raw.githubusercontent.com/xux123171-rgb/xiuqo/main/scripts/install.sh | bash
+
+# Windows (PowerShell)
+iex (irm https://raw.githubusercontent.com/xux123171-rgb/xiuqo/main/scripts/install.ps1)
 ```
+
+Then open a new terminal and:
+
+```bash
+xiuqo setup     # pick provider + model (API keys go to ~/.xiuqo/.env)
+xiuqo           # interactive chat
+```
+
+<details>
+<summary>Manual install / China network tips</summary>
+
+```bash
+git clone https://github.com/xux123171-rgb/xiuqo.git && cd xiuqo
+uv sync --locked
+.venv/bin/xiuqo setup    # Windows: .venv\Scripts\xiuqo setup
+```
+
+Behind the GFW, GitHub or PyPI may stall — point uv at a domestic mirror and/or
+a GitHub proxy before cloning:
+
+```bash
+uv sync --locked --default-index https://mirrors.aliyun.com/pypi/simple
+git clone https://ghproxy.net/https://github.com/xux123171-rgb/xiuqo.git
+```
+</details>
 
 Windows: use `.venv\Scripts\xiuqo` instead.
 
