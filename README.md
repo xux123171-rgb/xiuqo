@@ -1,6 +1,6 @@
 # Xiuqo Agent ☤
 
-> A self-improving AI agent for your terminal — with a full TUI and a WeChat gateway.
+> A self-improving AI agent for your terminal — pure Python CLI with a WeChat gateway.
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green" alt="License: MIT"></a>
@@ -15,7 +15,7 @@ What makes it different is the **learning loop**: it writes reusable skills from
 
 | | |
 |---|---|
-| **Real terminal UI** | Full TUI (Ink): multiline editing, slash-command autocomplete, streaming tool output, themable skins |
+| **Rich terminal interface** | Multiline editing, slash-command autocomplete, streaming tool output, themable skins — pure Python, zero extra runtimes |
 | **Any model, no lock-in** | `xiuqo model` switches provider/model live; credential pools rotate keys automatically |
 | **A closed learning loop** | Skills self-create & self-improve, agent-curated memory, FTS5 session search |
 | **WeChat gateway** | Chat with your local agent from a personal WeChat account (iLink Bot API, QR login) — plus the full messaging gateway platform |
@@ -28,7 +28,7 @@ What makes it different is the **learning loop**: it writes reusable skills from
 git clone https://github.com/xux123171-rgb/xiuqo.git && cd xiuqo
 uv sync --extra dev          # or: pip install -e .
 .venv/bin/xiuqo setup        # pick provider + model (API keys go to ~/.xiuqo/.env)
-.venv/bin/xiuqo              # interactive chat (add --tui for the full terminal UI)
+.venv/bin/xiuqo              # interactive chat
 ```
 
 Windows: use `.venv\Scripts\xiuqo` instead.
@@ -37,7 +37,7 @@ Windows: use `.venv\Scripts\xiuqo` instead.
 
 ```
 xiuqo                       interactive chat
-xiuqo --tui                 full terminal UI
+xiuqo --tui                 (falls back to the classic interface in this build)
 xiuqo chat -q "..."         one-shot query
 xiuqo model / moa / fallback    provider & model management
 xiuqo setup / doctor / status   configuration & health
@@ -57,4 +57,4 @@ In-repo docs: see `CONTRIBUTING.md` and the `xiuqo` skill (`skills/autonomous-ai
 
 MIT — see [LICENSE](LICENSE).
 
-Xiuqo is a derivative work of [Hermes Agent](https://github.com/NousResearch/hermes-agent) by [Nous Research](https://nousresearch.com), also MIT-licensed (Copyright (c) 2025 Nous Research). This fork keeps the full agent core, CLI, TUI and WeChat gateway, rebranded and maintained independently by [@xux123171-rgb](https://github.com/xux123171-rgb). Hermes is not affiliated with, endorsing, or supporting this project.
+Xiuqo is a derivative work of [Hermes Agent](https://github.com/NousResearch/hermes-agent) by [Nous Research](https://nousresearch.com), also MIT-licensed (Copyright (c) 2025 Nous Research). This fork keeps the full agent core, CLI, and WeChat gateway, rebranded and maintained independently by [@xux123171-rgb](https://github.com/xux123171-rgb). Hermes is not affiliated with, endorsing, or supporting this project.

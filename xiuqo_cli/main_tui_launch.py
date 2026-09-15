@@ -729,6 +729,13 @@ def _launch_tui(
     from xiuqo_cli.main import PROJECT_ROOT
     tui_dir = PROJECT_ROOT / "ui-tui"
 
+    if not (tui_dir / "package.json").exists():
+        # Ink TUI assets are not shipped in this build (CLI-only distribution):
+        # fall back to the classic prompt_toolkit interface instead of crashing.
+        print("TUI assets not installed — using the classic CLI interface "
+              "(this build ships without the Ink terminal UI).", file=sys.stderr)
+        return
+
     import tempfile
     # TUI child is a xiuqo process: propagate the profile-home contract via
     # the single factory; keep secrets (the TUI/agent needs provider creds).
