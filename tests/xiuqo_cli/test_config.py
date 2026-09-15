@@ -1421,10 +1421,10 @@ class TestEnvWriteDenylist:
         ("key", "expected"),
         [
             ("Path", "PATH"),
-            ("Hermes_Yolo_Mode", "XIUQO_YOLO_MODE"),
-            ("Hermes_Optional_Mcps", "XIUQO_OPTIONAL_MCPS"),
-            ("Hermes_Copilot_Acp_Command", "XIUQO_COPILOT_ACP_COMMAND"),
-            ("Hermes_Copilot_Acp_Args", "XIUQO_COPILOT_ACP_ARGS"),
+            ("Xiuqo_Yolo_Mode", "XIUQO_YOLO_MODE"),
+            ("Xiuqo_Optional_Mcps", "XIUQO_OPTIONAL_MCPS"),
+            ("Xiuqo_Copilot_Acp_Command", "XIUQO_COPILOT_ACP_COMMAND"),
+            ("Xiuqo_Copilot_Acp_Args", "XIUQO_COPILOT_ACP_ARGS"),
         ],
     )
     def test_windows_policy_names_are_case_insensitive(self, key, expected):
@@ -1449,10 +1449,10 @@ class TestEnvWriteDenylist:
     @pytest.mark.parametrize(
         "protected_key",
         [
-            "Hermes_Yolo_Mode",
-            "Hermes_Optional_Mcps",
-            "Hermes_Copilot_Acp_Command",
-            "Hermes_Copilot_Acp_Args",
+            "Xiuqo_Yolo_Mode",
+            "Xiuqo_Optional_Mcps",
+            "Xiuqo_Copilot_Acp_Command",
+            "Xiuqo_Copilot_Acp_Args",
         ],
     )
     def test_windows_writer_rejects_mixed_case_protected_name(self, protected_key):
