@@ -228,3 +228,5 @@ native/fts5_cjk/*.so
 hermes_agent.egg-info/
 xiuqo.egg-info/
 *.egg-info/
+
+.askpass.sh
